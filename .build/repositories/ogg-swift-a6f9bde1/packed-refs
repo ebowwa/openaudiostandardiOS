@@ -1,0 +1,13 @@
+# pack-refs with: peeled fully-peeled sorted 
+7aac2b7daff5c8455d8fa3de95c406c662a9f6e5 refs/heads/langleyd/sim_arm64_suppport
+9d82ed838404f10b607a1a1689f404563e9115c3 refs/heads/master
+7aac2b7daff5c8455d8fa3de95c406c662a9f6e5 refs/pull/1/head
+e4b03742d6da9f503ee525ad59c788e00918e966 refs/tags/0.7.0
+8dcf664537d3de9d6088ccf69a1c93fcd85e1e73 refs/tags/0.7.1
+c897b52b34ed6754ee07e0bdd64a25b0c9e273bd refs/tags/0.7.2
+331529742dd9ae903e414fe5c37f8ec357b773be refs/tags/0.7.3
+c445025006a691aca78abe60e0ec658a406e5d31 refs/tags/0.7.4
+^f28f659be45f62bca1caff636cfe3de0b04abd42
+bed9003d0d014f6237aed3de3a3cf5693ce91e18 refs/tags/0.8.0
+67ab5ddaf6692aa65a9d980eaf9cae96a1eed784 refs/tags/0.8.2
+9d82ed838404f10b607a1a1689f404563e9115c3 refs/tags/0.8.3

@@ -1,0 +1,30 @@
+name: AudioProcessorApp
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: 15.0
+
+targets:
+  AudioProcessorApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: .
+    settings:
+      base:
+        INFOPLIST_FILE: Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.AudioProcessorApp
+    info:
+      path: Info.plist
+      properties:
+        NSMicrophoneUsageDescription: "This app needs access to microphone for audio recording"
+        UILaunchStoryboardName: LaunchScreen
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations:
+            UIWindowSceneSessionRoleApplication:
+              - UISceneConfigurationName: Default Configuration
+                UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
+    dependencies:
+      - sdk: AVFoundation.framework
+      - sdk: CoreData.framework

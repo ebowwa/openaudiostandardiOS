@@ -1,0 +1,23 @@
+name: AudioProcessorApp
+options:
+  bundleIdPrefix: com.audioprocessor
+  deploymentTarget:
+    iOS: 15.0
+
+targets:
+  AudioProcessorApp:
+    type: application
+    platform: iOS
+    sources: 
+      - path: AudioProcessorApp
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: 1
+        DEVELOPMENT_TEAM: ""
+    info:
+      path: AudioProcessorApp/Info.plist
+      properties:
+        NSMicrophoneUsageDescription: "This app needs access to microphone for audio recording"
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        UILaunchStoryboardName: ""

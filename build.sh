@@ -29,8 +29,19 @@ if [ -f "Package.swift" ]; then
     swift package resolve
 fi
 
+# Get available simulator
+echo "🔍 Finding available iOS simulator..."
+AVAILABLE_SIMULATOR=$(xcrun simctl list devices available -j | grep -o '"name" : "iPhone [0-9][0-9]*"' | head -n 1 | grep -o 'iPhone [0-9][0-9]*')
+
+if [ -z "$AVAILABLE_SIMULATOR" ]; then
+    echo "❌ No available iOS simulator found"
+    exit 1
+fi
+
+echo "📱 Using simulator: $AVAILABLE_SIMULATOR"
+
 # Build for iOS
 echo "🏗️ Building for iOS..."
-xcodebuild build -project AudioProcessorApp.xcodeproj -scheme AudioProcessorApp -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14'
+xcodebuild build -project AudioProcessorApp.xcodeproj -scheme AudioProcessorApp -sdk iphonesimulator -destination "platform=iOS Simulator,name=$AVAILABLE_SIMULATOR"
 
 echo "✅ Build completed successfully!"

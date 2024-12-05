@@ -1,0 +1,24 @@
+{
+    "xcode": {
+        "minimumVersion": "16.0",
+        "project": {
+            "name": "AudioProcessorApp",
+            "scheme": "AudioProcessorApp",
+            "xcodeproj": "AudioProcessorApp.xcodeproj"
+        }
+    },
+    "build": {
+        "platform": "iOS Simulator",
+        "sdk": "iphonesimulator",
+        "simulator": {
+            "defaultDevice": "iPhone 16"
+        }
+    },
+    "dependencies": {
+        "checkPackageManager": true,
+        "useSwiftPackageManager": true
+    },
+    "paths": {
+        "packageFile": "Package.swift"
+    }
+}

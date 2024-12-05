@@ -15,18 +15,26 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 
-# Swift Package Manager
-.build/
-Packages/
-Package.pins
-Package.resolved
-*.xcodeproj/*.xcworkspace/xcshareddata/swiftpm/
-
 # Build products
 build/
 *.o
 *.LinkFileList
 *.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+.build/
+Build/
+Debug*/
+Release*/
+*.app
+*.app.dSYM*
+
+# Swift Package Manager
+Packages/
+Package.pins
+Package.resolved
+*.xcodeproj/*.xcworkspace/xcshareddata/swiftpm/
 
 # Playgrounds
 timeline.xctimeline
@@ -36,3 +44,12 @@ playground.xcworkspace
 Pods/
 *.xcworkspace
 !default.xcworkspace
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+injectionforxcode/
